@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeri Foto</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      text-align: center;
+      padding: 30px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body style="display:none;" id="main">
+<script>
+  const password = "mas5indo";
+  const input = prompt("Masukkan password:");
+  if (input === password) {
+    document.getElementById("main").style.display = "block";
+  } else {
+    document.write("<h2>Akses Ditolak</h2><p>Password salah.</p>");
+  }
+</script>
+</head>
+<body>
+  <h1>Jadi Gini ..</h1>
+  <div class="gallery">
+    <img src="foto1.png" alt="Foto 1">
+    <img src="foto2.png" alt="Foto 2">
+    <img src="foto3.png" alt="Foto 2">
+    <img src="foto4.png" alt="Foto 2">
+    <!-- Tambahkan foto lainnya di sini -->
+  </div>
+</body>
+</html>
